@@ -11,7 +11,6 @@ class App extends React.Component {
       category: "",
       size: "",
     },
-    products: fashion
   }
 
   filterChange = (e) => {
@@ -35,7 +34,8 @@ class App extends React.Component {
 
         <main>
           <Item
-            items={this.state.products}
+            items={fashion}
+            filter={this.state.filter}
           />
         </main>
       </div>
