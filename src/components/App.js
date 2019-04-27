@@ -6,7 +6,13 @@ import './App.css';
 
 class App extends React.Component {
 
-  state = {products: fashion}
+  state = {
+    filter: {
+      category: "",
+      size: "",
+    },
+    products: fashion
+  }
 
   updateItem = (filter) => {
     this.setState({products: fashion});
@@ -28,8 +34,7 @@ class App extends React.Component {
       <div className="wrapper">
         <div className="sidebar">
           <SideBar
-            onClick={this.updateItem}
-            items={this.state.products}
+            filter={this.state.filter}
           />
         </div>
 
