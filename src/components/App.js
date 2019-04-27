@@ -7,18 +7,13 @@ import './App.css';
 class App extends React.Component {
 
   state = {
-    filter: {
-      category: "",
-      size: "",
-    },
+    category: "",
+    size: "",
   }
 
   filterChange = (e) => {
     this.setState({
-      filter: {
-        ...this.state.filter,
-        [e.target.name]: e.target.value,
-      }
+      [e.target.name]: e.target.value,
     });
   }
 
@@ -27,7 +22,7 @@ class App extends React.Component {
       <div className="wrapper">
         <div className="sidebar">
           <SideBar
-            filter={this.state.filter}
+            filter={this.state}
             onChange={this.filterChange}
           />
         </div>
@@ -35,7 +30,7 @@ class App extends React.Component {
         <main>
           <Item
             items={fashion}
-            filter={this.state.filter}
+            filter={this.state}
           />
         </main>
       </div>
