@@ -1,13 +1,9 @@
 import React from 'react'
 
 const Item = (props) => {
-  const { items, filter } = props;
+  const { items } = props;
 
   const renderedList = items
-    .filter(item =>
-      [item.category, ""].includes(filter.category) &&
-      [item.size, ""].includes(filter.size)
-    )
     .map(item => {
       return (
         <li key={item.id}>

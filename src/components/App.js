@@ -1,7 +1,7 @@
 import React from 'react'
 import SideBar from './SideBar';
 import Item from './Item';
-import fashion from '../data/fashion.json';
+import FASHION_DATA from '../data/fashion.json';
 import './App.css';
 
 class App extends React.Component {
@@ -25,6 +25,12 @@ class App extends React.Component {
   }
 
   render() {
+    const { category, size } = this.state;
+    const items = FASHION_DATA.filter(item =>
+      [item.category, ""].includes(category) &&
+      [item.size, ""].includes(size)
+    );
+
     return (
       <div className="wrapper">
         <div className="sidebar">
@@ -36,10 +42,7 @@ class App extends React.Component {
         </div>
 
         <main>
-          <Item
-            items={fashion}
-            filter={this.state}
-          />
+          <Item items={items} />
         </main>
       </div>
     );
