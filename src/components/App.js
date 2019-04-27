@@ -14,19 +14,13 @@ class App extends React.Component {
     products: fashion
   }
 
-  updateItem = (filter) => {
-    this.setState({products: fashion});
-    let filteredItem = this.state.products.slice();
-
-
-    let products = filteredItem.filter(item => {
-      if (item.category === filter || item.size === filter) {
-        return true;
+  filterChange = (e) => {
+    this.setState({
+      filter: {
+        ...this.state.filter,
+        [e.target.name]: e.target.value,
       }
-
     });
-    this.setState({products: products});
-    console.log(products);
   }
 
   render() {
@@ -35,6 +29,7 @@ class App extends React.Component {
         <div className="sidebar">
           <SideBar
             filter={this.state.filter}
+            onChange={this.filterChange}
           />
         </div>
 
