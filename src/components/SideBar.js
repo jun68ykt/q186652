@@ -1,26 +1,9 @@
 import React from 'react'
 
 class SideBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { checked: false }
-  }
-
-  getValue = (event) => {
-    // console.log("Get value", event.target.value);
-
-    // Trigers updateItem() on App Component
-    this.props.onClick(event.target.value);
-  }
-
-  toggleChecked = () => {
-    if(this.state.checked===false) {
-      this.setState({ checked: !this.state.checked });
-      console.log("toggleChecked", this.state.checked);
-    }
-  }
-
   render() {
+    const { filter } = this.props;
+
     return (
       <div>
 
@@ -29,32 +12,28 @@ class SideBar extends React.Component {
             <input
               type="radio"
               value="shirt"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.category === 'shirt'}
             />Shirts
           </li>
           <li>
             <input
               type="radio"
               value="jacket"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.category === 'jacket'}
             />Jackets
           </li>
           <li>
             <input
               type="radio"
               value="skirt"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.category === 'skirt'}
             />Skirts
           </li>
           <li>
             <input
               type="radio"
               value="pants"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.category === 'pants'}
             />Pants
           </li>
         </ul>
@@ -64,24 +43,21 @@ class SideBar extends React.Component {
             <input
               type="radio"
               value="S"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.size === 'S'}
             />S
           </li>
           <li>
             <input
               type="radio"
               value="M"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.size === 'M'}
             />M
           </li>
           <li>
             <input
               type="radio"
               value="L"
-              checked={this.toggleChecked}
-              onChange={(e) => this.getValue(e)}
+              checked={filter.size === 'L'}
             />L
           </li>
         </ul>
