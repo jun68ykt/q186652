@@ -1,6 +1,6 @@
 import React from 'react'
 
-const filterValues = [
+const FILTER_VALUES = [
   { name: 'category', values: ['shirt', 'jacket', 'skirt', 'pants'] },
   { name: 'size', values: ['S', 'M', 'L'] }
 ];
@@ -12,7 +12,7 @@ class SideBar extends React.Component {
     return (
       <div>
         {
-          filterValues.map(({name, values}) =>
+          FILTER_VALUES.map(({name, values}) =>
             <ul
               className={`${name}_list`}
               key={name}
