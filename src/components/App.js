@@ -17,6 +17,13 @@ class App extends React.Component {
     });
   }
 
+  filterClear = () => {
+    this.setState({
+      category: "",
+      size: "",
+    })
+  }
+
   render() {
     return (
       <div className="wrapper">
@@ -24,6 +31,7 @@ class App extends React.Component {
           <SideBar
             filter={this.state}
             onChange={this.filterChange}
+            onClear={this.filterClear}
           />
         </div>
 

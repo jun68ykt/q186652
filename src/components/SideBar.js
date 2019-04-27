@@ -2,7 +2,7 @@ import React from 'react'
 
 class SideBar extends React.Component {
   render() {
-    const { filter, onChange } = this.props;
+    const { filter, onChange, onClear } = this.props;
 
     return (
       <div>
@@ -75,6 +75,7 @@ class SideBar extends React.Component {
             />L
           </li>
         </ul>
+        <button onClick={onClear}>フィルタをクリア</button>
       </div>
     );
   }
