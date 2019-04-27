@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Black Shirt",
+    "price": "$4.99",
+    "image": "201904041432_1.jpg",
+    "size": "S",
+    "category": "shirt"
+  },
+  {
+    "id": "2",
+    "name": "Pink Medium Shirt",
+    "price": "$6.99",
+    "image": "201904041432_1.jpg",
+    "size": "M",
+    "category": "shirt"
+  },
+  {
+    "id": "3",
+    "name": "Red Shirt",
+    "price": "$3.49",
+    "image": "201904190794_1.jpg",
+    "size": "L",
+    "category": "shirt"
+  },
+  {
+    "id": "4",
+    "name": "Tight Skirt",
+    "price": "$12.99",
+    "image": "401902170012_1.jpg",
+    "size": "S",
+    "category": "skirt"
+  },
+  {
+    "id": "5",
+    "name": "Short Skirt",
+    "price": "$14.99",
+    "image": "901904190003_1.jpg",
+    "size": "M",
+    "category": "skirt"
+  },
+  {
+    "id": "6",
+    "name": "Winter Skirt",
+    "price": "$10.99",
+    "image": "401902170126_1.jpg",
+    "size": "L",
+    "category": "skirt"
+  },
+  {
+    "id": "7",
+    "name": "Black Jacket",
+    "price": "$44.99",
+    "image": "201902181237_1.jpg",
+    "size": "S",
+    "category": "jacket"
+  },
+  {
+    "id": "8",
+    "name": "Denim Jacket",
+    "price": "$56.99",
+    "image": "042-901811090003_1.jpg",
+    "size": "M",
+    "category": "jacket"
+  },
+  {
+    "id": "9",
+    "name": "Rider's Jacket",
+    "price": "$84.99",
+    "image": "201902041846_1.jpg",
+    "size": "L",
+    "category": "jacket"
+  },
+  {
+    "id": "10",
+    "name": "Blue Medium Shirt",
+    "price": "$6.99",
+    "image": "901904240035_1.jpg",
+    "size": "M",
+    "category": "pants"
+  }
+]
